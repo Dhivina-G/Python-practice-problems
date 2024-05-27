@@ -24,11 +24,16 @@ print(new_list)
 # 29. Python – Adding Tuple to List and vice – versa
 
 items = ('book','pen','bottle','shoe')
-items_list = list(items)                 # list() to convert tuple to list
+items_list = [3,12,1]                     # created a list   
+items_list.append(items)                  # append the tuple items to list
 print(items_list)
 
+items_tuple = (2,14,33)  
 items = ['book','pen','bottle','shoe']
-items_tuple = tuple(items)              # tuple() to convert tuple to list
+items_list = list(items_tuple)             # convert tuple to list
+items_list.append(items)                   # append items to the converted tuple
+items_tuple = tuple(items_list)            # again change the list to tuple
 print(items_tuple)
 
 # 30. Python – Closest Pair to Kth index element in Tuple
+
