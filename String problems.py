@@ -50,13 +50,32 @@ print(new_string)
 
 string = input('Enter a string:')
 substring = input('Enter a substring for string:')             
-if substring in string:
+if substring in string:                               # check if the substrig present in string
     print('Substring is present')
 else:
     print('Substring not present')
 
 # 16. Python – Words Frequency in String Shorthands
+
+string = input('enter the string:')
+new_string = string.split(' ')           # split the word with space
+count = {}                               # set a dictionary to count the words
+for word in new_string:                    
+    if word in count:                    # check if the word in count
+        count[word] += 1                 # if present increase the count
+    else:
+        count[word] = 1                  # if not present assign as one
+print(count)
+
 # 17. Python – Convert Snake case to Pascal case
+
+string = 'python_program'
+new_string = string.split('_')        # split the underscore
+new_word = ''                         # initialize a new empty string
+for word in new_string:
+    new_word += word.title()          # concantenate word and capitilze
+print(new_word)
+
 
 # 18. Find length of a string in python (4 ways)
 
@@ -73,10 +92,21 @@ print('Length of the string =',count)
 
 # 19. Python program to print even length words in a string
 
-# string = input('Enter the string:')
-# for word in string:
-#     if(len(word)%2 == 0):
-#         print(word)
+string = input('Enter the string:')
+new_string = string.split(' ')           # split the space
+for word in new_string:                  # iterate through each word
+    if(len(word)%2 == 0):                # check if the length of word is even
+        print(word)
 
 # 20. Python program to accept the strings which contains all vowels
+
+string = input('Enter the string:')
+vowels = ['a','e','i','o','u']            # intialize vowels
+for letter in string:
+    if(letter not in vowels):             # check if the letters in vowels
+      print('String can be accepted')
+      break
+else:
+    print('String cannot accept')
+
 
