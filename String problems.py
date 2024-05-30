@@ -117,9 +117,15 @@ else:
 string_1 = input('Enter the string:')
 string_2 = input('Enter the second string:')
 count = 0
+<<<<<<< HEAD
 for i in string_1:
     for j in string_2:
         if(i==j):
+=======
+for letter in string_1:
+    for char in string_2:
+        if(letter == char):
+>>>>>>> origin
             count += 1
 print(count)
 

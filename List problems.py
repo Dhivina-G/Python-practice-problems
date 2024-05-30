@@ -133,9 +133,16 @@ for lst in list:
         largest_value = lst                        # if the compared value is greater than largest_value ,set the value as largest
 print(f'Largest number in list:{largest_value}')
 
+<<<<<<< HEAD
 # ----------------------------27/05/24---------------
 
 # 1. Python program to find second largest number in a list
+=======
+
+# ----------------------------27/05/24---------------
+
+#  1. Python program to find second largest number in a list
+>>>>>>> origin
 
 list = [2,4,1,5,13,73]
 new_list = sorted(list)
@@ -143,7 +150,11 @@ print(new_list)
 second_largest = new_list[:]
 print(second_largest)
 
+<<<<<<< HEAD
 # 2. Python program to find N largest elements from a list
+=======
+#  2. Python program to find N largest elements from a list
+>>>>>>> origin
 
 list = [3,1,44,52,12]
 n = int(input('Enter the limit:'))
@@ -151,21 +162,33 @@ new_list = sorted(list)
 largest_elements = new_list[-n:]
 print(largest_elements)
 
+<<<<<<< HEAD
 # 3. Python program to print even numbers in a list
+=======
+#  3. Python program to print even numbers in a list
+>>>>>>> origin
 
 list = [2,4,6,1,3,7]
 for num in list:
     if num %2 == 0:
         print(num)
 
+<<<<<<< HEAD
 # 4.  Python program to print odd numbers in a List
+=======
+#  4.  Python program to print odd numbers in a List
+>>>>>>> origin
 
 list = [2,3,12,11,17,22]
 for num in list:
     if num %2 != 0:
         print(num)
 
+<<<<<<< HEAD
 # 5. Python program to print all even numbers in a range
+=======
+#  5. Python program to print all even numbers in a range
+>>>>>>> origin
 
 start_limit = int(input('Enter the start range:'))
 End_limit = int(input('Enter the end range:'))
