@@ -49,12 +49,64 @@ elements = (1,4,5,6,2)
 k = int(input('Enter the index of element:'))
 k_value = elements[k]                                     # index value of k
 for num in range(len(elements)):                          # iterate from first value
-    for nums in range(num+1,len(elements)):               # iterate from second value
-        if(elements[num]+elements[nums]==k_value):        # check if the sum is equal to k_value
+    for nums in range(num+1, len(elements)):               # iterate from second value
+        if elements[num] + elements[nums] == k_value:        # check if the sum is equal to k_value
             print(f'{elements[num]},{elements[nums]}')
             break
           
+#  ----------------27/4/24----------------------------
+
+# Python – Join Tuples if similar initial element
+
+first_elements = (1,3,41,13,77)
+second_elements = (2,6,35,71,1)
+first_ele = first_elements[0]
+second_ele = second_elements[0]
+if first_ele == second_ele:
+    print(first_elements+second_elements)
+else:
+    print('tuples cannot be joined')
+
+elements = ((2,1),(3,8),(4,12),(2,9),(3,6))
+for el in range(len(elements)):
+    for ele in range(el+1,len(elements)):
+        if elements[el][0] == elements[ele][0]:
+            print(f'{elements[el]},{elements[ele]}')
+
+# Python – Extract digits from Tuple list
+
+items = [('hai','good',12,45.2,9,'fine')]
+numbers = []
+for item in items:
+    if chr in item:
+        if type(chr) == int or type(chr) == float:
+           numbers.append(chr)
+print(numbers)
+    
+
+# Python – All pair combinations of 2 tuples
+
+first_elements = (2,5,1,3,6)
+second_elements = (1,4,8,9,0)
+pair = []
+for num in first_elements:
+    for nums in second_elements:
+        pair.append((num,nums))
+print(pair) 
+
+# Python – Remove Tuples of Length K
+
+elements = [(2,1,3),(3,8),(4,12,1,3),(2,9),(3,6)]
+k = int(input('Enter the lenght to be removed:'))
+removed = []
+for i in elements:
+    if len(i) == k:
+        removed.append(i)
+print(removed)
 
 
+# Sort a list of tuples by second Item
 
-        
+# elements = [(2,1),(3,8),(4,12),(2,9),(3,6)]
+# for i in range(len(elements)):
+#     for j in range(len(elements)-1):
