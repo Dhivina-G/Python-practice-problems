@@ -55,15 +55,32 @@
 # new_details = sorted(details.items())
 # print(new_details)
 
-# details = {'name':'Serin','place':'Mumbai','address':'xyz'}
-# new_details = sorted(details.items())
-# print(new_details)
-# dict = {}
-# for i in new_details:
-
+details = {'name':'Serin','place':'Mumbai','address':'xyz'}
+details_list = []
+for val in details.values():
+    details_list.append(val)
+print(details_list)
+details_sort = sorted(details_list)
+new_details = {}
+for i in details_sort:
+    for j in details.keys():
+        if details[i] == details[j]:
+            new_details[j]=i
+print(new_details)
+    
 
 
 # Python – Sort Dictionary key and values List
+
+# details = {'name':'Serin','place':'Mumbai','address':'xyz'}
+# details_key = []
+# details_val = []
+# for key in details:
+#     details_key.append(key)
+# print(sorted(details_key))
+# for val in details.values():
+#     details_val.append(val)
+# print(sorted(details_val))
 
 # Handling missing keys in Python dictionaries
 
