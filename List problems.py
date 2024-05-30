@@ -1,17 +1,17 @@
-# 1. Python program to interchange first and last elements in a list
+#  1. Python program to interchange first and last elements in a list
 
 list = [3,4,7,9,12,24]
-first_number = list.pop(0)                      # assigning the first index element that is removed
-last_number = list.pop(-1)                      # assigning the last index element that is removed
-first_number_new = list.insert(0,last_number)   # inserting last_number to the zeroth position
-last_number_new = list.append(first_number)     # appending first_number to first posiiton
+first_number = list.pop(0)                       # assigning the first index element that is removed
+last_number = list.pop(-1)                       # assigning the last index element that is removed
+first_number_new = list.insert(0, last_number)   # inserting last_number to the zeroth position
+last_number_new = list.append(first_number)      # appending first_number to first posiiton
 print(list)
 
 list = [3,4,7,9,12,24]
 list[0], list[-1] = list[-1], list[0]    # swapping first and last element in the list
 print(list) 
 
-# 2. Python program to swap two elements in a list
+#  2. Python program to swap two elements in a list
 
 list = [3,4,8,12,33,62]
 first_number = int(input('Enter the value from list:'))                                      # get the number that need to br swaped
@@ -132,3 +132,44 @@ for lst in list:
     if lst > largest_value:                        # compare each value with the largest_value
         largest_value = lst                        # if the compared value is greater than largest_value ,set the value as largest
 print(f'Largest number in list:{largest_value}')
+
+# ----------------------------27/05/24---------------
+
+# 1. Python program to find second largest number in a list
+
+list = [2,4,1,5,13,73]
+new_list = sorted(list)
+print(new_list)
+second_largest = new_list[:]
+print(second_largest)
+
+# 2. Python program to find N largest elements from a list
+
+list = [3,1,44,52,12]
+n = int(input('Enter the limit:'))
+new_list = sorted(list)
+largest_elements = new_list[-n:]
+print(largest_elements)
+
+# 3. Python program to print even numbers in a list
+
+list = [2,4,6,1,3,7]
+for num in list:
+    if num %2 == 0:
+        print(num)
+
+# 4.  Python program to print odd numbers in a List
+
+list = [2,3,12,11,17,22]
+for num in list:
+    if num %2 != 0:
+        print(num)
+
+# 5. Python program to print all even numbers in a range
+
+start_limit = int(input('Enter the start range:'))
+End_limit = int(input('Enter the end range:'))
+for num in range(start_limit,End_limit):
+    if num % 2 == 0:
+        print(num)
+    num+=1
