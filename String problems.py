@@ -95,18 +95,85 @@ print('Length of the string =',count)
 string = input('Enter the string:')
 new_string = string.split(' ')           # split the space
 for word in new_string:                  # iterate through each word
-    if(len(word)%2 == 0):                # check if the length of word is even
+    if len(word) %2 == 0:                # check if the length of word is even
         print(word)
 
 # 20. Python program to accept the strings which contains all vowels
 
 string = input('Enter the string:')
-vowels = ['a','e','i','o','u']            # intialize vowels
+vowels = ['a', 'e', 'i', 'o', 'u']            # intialize vowels
 for letter in string:
-    if(letter not in vowels):             # check if the letters in vowels
+    if letter not in vowels:             # check if the letters in vowels
       print('String can be accepted')
       break
 else:
     print('String cannot accept')
 
+
+#  -----------------------------------------27/4/24-----------------------------------------------
+
+# 1. Python | Count the Number of matching characters in a pair of string
+
+string_1 = input('Enter the string:')
+string_2 = input('Enter the second string:')
+count = 0
+for i in string_1:
+    for j in string_2:
+        if(i==j):
+            count += 1
+print(count)
+
+
+# 2. Remove all duplicates from a given string in Python
+
+string = input('Enter the string:')
+new_string = ''
+for letter in string:
+    if(letter not in new_string):
+        new_string += letter
+print('After duplication:',new_string)
+
+
+# 3. Python – Least Frequent Character in String
+
+string = input('Enter the string:')
+new = {}
+for letter in string:
+    if letter in new:
+        new[letter] += 1 
+    else:
+        new[letter] = 1
+print(new)
+min_char = []
+min_value = min(new.values())
+for key,value in new.items():
+    if value == min_value:
+        min_char.append(key)
+print(min_char)
+
+
+# 4. Python | Maximum frequency character in String
+
+string = input('Enter the string:')
+new = {}
+for letter in string:
+    if letter in new:
+        new[letter] += 1 
+    else:
+        new[letter] = 1
+print(new)
+max_char = []
+max_value = max(new.values())
+for key,value in new.items():
+    if value == max_value:
+        max_char.append(key)
+print(max_char)
+
+# 5. Python | Program to check if a string contains any special character
+
+string = input('Enter the string:')
+if string.isalnum():
+    print('String does not contain special charater')
+else:
+    print('String contains special charater')
 
