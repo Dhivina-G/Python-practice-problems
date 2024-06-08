@@ -54,6 +54,7 @@ for num in range(len(elements)):                          # iterate from first v
             print(f'{elements[num]},{elements[nums]}')
             break
           
+
 #  ----------------27/4/24----------------------------
 
 # Python – Join Tuples if similar initial element
@@ -63,15 +64,15 @@ second_elements = (2,6,35,71,1)
 first_ele = first_elements[0]
 second_ele = second_elements[0]
 if first_ele == second_ele:
-    print(first_elements+second_elements)
+    print(first_elements + second_elements)
 else:
     print('tuples cannot be joined')
 
 elements = ((2,1),(3,8),(4,12),(2,9),(3,6))
 for el in range(len(elements)):
-    for ele in range(el+1,len(elements)):
+    for ele in range(el + 1, len(elements)):
         if elements[el][0] == elements[ele][0]:
-            print(f'{elements[el]},{elements[ele]}')
+            print(f'{elements[el]}, {elements[ele]}')
 
 # Python – Extract digits from Tuple list
 
@@ -99,14 +100,43 @@ print(pair)
 elements = [(2,1,3),(3,8),(4,12,1,3),(2,9),(3,6)]
 k = int(input('Enter the lenght to be removed:'))
 removed = []
-for i in elements:
-    if len(i) == k:
-        removed.append(i)
+for num in elements:
+    if len(num) == k:
+        removed.append(num)
 print(removed)
 
 
 # Sort a list of tuples by second Item
 
-# elements = [(2,1),(3,8),(4,12),(2,9),(3,6)]
-# for i in range(len(elements)):
-#     for j in range(len(elements)-1):
+elements = [(2,1),(3,8),(4,12),(2,9),(3,6)]
+sort_element = sorted(elements,key = lambda x: x[1])
+print(sort_element)
+
+
+
+#  --------------------31/05/24--------------------------------
+
+
+# 28. Python program to Order Tuples using external List
+
+data = [('zera',22),('mathew',38),('john',56),('ann',12)]
+ordered_data = sorted(data,key = lambda item: item[0])
+print(ordered_data)
+
+# 29. Python – Flatten tuple of List to tuple
+
+numbers = ([3,4,1],[7,127,6],[3,14,11,8])
+new_list = []
+for num in numbers:
+    for nums in num:
+      new_list.append(nums)
+new_list = tuple(new_list)
+print(new_list)
+
+# 30. Python – Convert Nested Tuple to Custom Key Dictionary
+
+details = (('name','Mark'),('age',34),('place','Kerala'))
+details_dict = {}
+for key,value in details:
+    details_dict[key] = value
+print(details_dict)
