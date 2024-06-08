@@ -133,28 +133,20 @@ for lst in list:
         largest_value = lst                        # if the compared value is greater than largest_value ,set the value as largest
 print(f'Largest number in list:{largest_value}')
 
-<<<<<<< HEAD
-# ----------------------------27/05/24---------------
-
-# 1. Python program to find second largest number in a list
-=======
 
 # ----------------------------27/05/24---------------
 
 #  1. Python program to find second largest number in a list
->>>>>>> origin
 
 list = [2,4,1,5,13,73]
 new_list = sorted(list)
 print(new_list)
-second_largest = new_list[:]
+second_largest = new_list[-2]
 print(second_largest)
 
-<<<<<<< HEAD
+
+
 # 2. Python program to find N largest elements from a list
-=======
-#  2. Python program to find N largest elements from a list
->>>>>>> origin
 
 list = [3,1,44,52,12]
 n = int(input('Enter the limit:'))
@@ -162,33 +154,21 @@ new_list = sorted(list)
 largest_elements = new_list[-n:]
 print(largest_elements)
 
-<<<<<<< HEAD
+
 # 3. Python program to print even numbers in a list
-=======
-#  3. Python program to print even numbers in a list
->>>>>>> origin
 
 list = [2,4,6,1,3,7]
 for num in list:
     if num %2 == 0:
         print(num)
 
-<<<<<<< HEAD
-# 4.  Python program to print odd numbers in a List
-=======
 #  4.  Python program to print odd numbers in a List
->>>>>>> origin
-
 list = [2,3,12,11,17,22]
 for num in list:
     if num %2 != 0:
         print(num)
 
-<<<<<<< HEAD
-# 5. Python program to print all even numbers in a range
-=======
 #  5. Python program to print all even numbers in a range
->>>>>>> origin
 
 start_limit = int(input('Enter the start range:'))
 End_limit = int(input('Enter the end range:'))
@@ -196,3 +176,111 @@ for num in range(start_limit,End_limit):
     if num % 2 == 0:
         print(num)
     num+=1
+
+
+# -----------------------31/05/24----------------------------
+
+# 1. Python program to print all odd numbers in a range
+
+start_limit = int(input('Enter the limit:'))
+End_limit = int(input('Enter the end limit:'))
+for num in range(start_limit,End_limit+1):
+    if num %2 != 0:
+        print(num)
+
+
+# 2. Python program to print positive numbers in a list
+
+list = [2,-1,5,-7,18]
+for num in list:
+    if num > 0:
+        print(num)
+
+
+# 3. Python program to print negative numbers in a list
+
+list = [2,-3,6,-7]
+for num in list:
+    if num < 0:
+        print(num)
+
+
+# 4. Python program to print all positive numbers in a range
+
+start_limit = int(input('Enter the start limit:'))
+End_limit = int(input('Enter the end limit:'))
+for num in range(start_limit,End_limit+1):
+    if num > 0:
+        print(num)
+
+
+# 5. Python program to print all negative numbers in a range
+
+start_limit = int(input('Enter the start limit:'))
+End_limit = int(input('Enter the end limit:'))
+for num in range(start_limit, End_limit+1):
+    if num < 0:
+        print(num)
+
+
+# 6. Remove multiple elements from a list in Python
+
+values = [3,2,11,65,38,5]
+element_one = int(input('enter the element to be removed:'))
+element_two = int(input('Enter the element to be removed:'))
+new_list = [element_one,element_two]
+for val in values:
+    if val in new_list:
+        values.remove(val)
+print(values)
+
+# 7. Python – Remove empty List from List
+
+elements = [[2,3,4,12,28],[],[9,12,34,55],[4,63,0,1,5]]
+new_element = []
+for num in elements:
+    if num != []:
+        new_element.append(num)
+print(new_element)
+
+# 8. Python | Cloning or Copying a list
+
+def cloning(lst):
+    new_list = lst
+    return new_list
+words = ['good','come','find','look']
+print(cloning(words))
+
+# 9. Python | Count occurrences of an element in a list
+
+numbers = [2,4,1,92,4,14,9,0]
+new_list = {}
+for num in numbers:
+    if num in new_list:
+        new_list[num] += 1
+    else:
+        new_list[num] = 1
+print(new_list)
+
+numbers = [2,4,1,92,4,14,9,4]
+element = int(input('Enter the element:'))
+count = 0
+for val in numbers:
+    if val == element:
+        count += 1
+print(f'count of {element} is {count}')
+
+numbers = [3,4,1,92,4,64,3,4]
+element = int(input('Enter the element:'))
+for val in numbers:
+    times = numbers.count(element)
+print(f'Number of times {element} occure = {times}')
+
+# 10. Python | Remove empty tuples from a list
+
+elements = [(2,3,4,12,28),(),(9,12,34,55),(4,63,0,1,5)]
+new_element = []
+for num in elements:
+    if num != ():
+        new_element.append(num)
+print(new_element)
